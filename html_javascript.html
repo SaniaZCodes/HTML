@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Interactive Explorer</title>
+        <style>
+            #top-section
+            {
+                background: #2c3e50; 
+                color: white; 
+                padding: 20px;
+            }
+            .lab-box
+            {}
+        </style>
+    </head>
+    <body>
+        <div id="top-section">
+            <h1> JS Interaction Lab </h1>
+        </div>
+        <div class="lab-box">
+            <p id="message">Adventure is out there..."</p>
+            <button onclick="myFunction()">Reveal Secret</button>
+        </div>
+    </body>
+    <script>
+            function myFunction()
+            {
+                document.getElementById("message").innerHTML="You just unlocked the Golden Path!"
+                document.getElementById("message").style.color="Orange"
+                document.getElementById("message").style.fontSize="25px"
+            }
+    </script>
+</html>
