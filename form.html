@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML Form">
+        <meta name="description" content="Sania's Professional Enrollment Form">
+        <meta name="author" content="Sania Zafar">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Master Profile Form</title>
+        <style>
+            body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; padding: 40px; color: #333;}
+            form { max-width: 650px; margin: 0 auto; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);}
+            h1 { text-align: center; color: #2c3e50; margin-bottom: 30px;}
+            fieldset { border: 1px solid #dcdde1;border-radius: 8px;margin-bottom: 20px; padding: 20px;}
+            legend {font-weight: bold;color: #3498db;padding: 0 10px;}
+            label {font-weight: 600;margin-bottom: 5px;display: inline-block;}
+            input[type="text"], 
+            input[type="email"], 
+            input[type="password"], 
+            input[type="date"], 
+            select, 
+            textarea {width: 100%;padding: 10px;margin-top: 5px;margin-bottom: 15px;border: 1px solid #ccc;border-radius: 5px;box-sizing: border-box;}
+            input[type="radio"], input[type="checkbox"] {margin-right: 5px;}
+            .btn-group {text-align: center;margin-top: 20px;}
+            .submit-btn {background-color: #27ae60;color: white;border: none;padding: 12px 25px;border-radius: 5px;cursor: pointer;font-size: 16px;transition: 0.3s;}
+            .submit-btn:hover {background-color: #219150;}
+            .reset-btn {background-color: #e74c3c;color: white;border: none;padding: 12px 25px;border-radius: 5px;cursor: pointer;margin-left: 10px;}
+        </style>
+    </head>
+    <body>
+        <h1>The Master Profile Form</h1>
+        <form>
+            <fieldset>
+                <legend>Basic Identity</legend>
+
+                <label for="fullname">Full Name</label><br>
+                <input type="text" id="fullname" name="fullname" value="Sania" required><br>
+                
+                <label for="emailaddress">Email Address</label><br>
+                <input type="email" id="emailaddress" name="emailaddress" value="" required><br>
+
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password" value=""><br>
+
+                <label for="dob">Date of Birth</label><br>
+                <input type="date" id="dob" name="dob" value=""><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Personal Preferences</legend>
+
+                <label for="profilepicture">Profile Picture</label><br>
+                <input type="file" id="profilepicture" name="profilepicture" value=""><br>
+
+                <label>Gender</label><br>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>&nbsp;
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>&nbsp;
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label><br>
+                
+                <label for="">Skills</label><br>
+
+                <input type="checkbox" id="skill1" name="skill1" value="HTML">
+                <label for="skill1">HTML</label><br>
+
+                <input type="checkbox" id="skill2" name="skill2" value="CSS">
+                <label for="skill2">CSS</label><br>
+
+                <input type="checkbox" id="skill3" name="skill3" value="JavaScript">
+                <label for="skill3">JavaScript</label><br>
+
+                <input type="checkbox" id="skill4" name="skill4" value="Python">
+                <label for="skill4">Python</label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Professional Info</legend>
+
+                <label for="experiencelevel">Experience Level</label><br>
+                <select id="experiencelevel" name="experiencelevel">
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Expert">Expert</option>
+                </select>
+
+                <br>
+
+                <label for="dailycodinghours">Daily Coding Hours (between 1 to 12)</label><br>
+                <input type="range" id="dailycodinghours" name="dailycodinghours" min="1" max="12"><br>
+
+                <label for="biography">Biography</label>
+                <textarea name="biography" rows="5" cols="10"></textarea><br>
+            </fieldset>
+            <div class="btn-group">
+                <button type="submit" class="submit-btn">Submit Form</button>
+                <button type="reset" class="reset-btn">Clear Form</button>
+            </div>
+        </form>
+    </body>
+</html>
