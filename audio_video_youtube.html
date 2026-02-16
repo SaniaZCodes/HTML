@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content ="Sania Zafar">
+        <meta name="viewport" content="width= device-width, initial-scale=1.0">
+        <meta name="description" content="A multimedia testing hub for video, audio, and YouTube content.">
+        <title>The Multimedia Feedback Hub</title>
+        <style>
+            body {font-family: 'Segoe UI', Arial, sans-serif;background-color: #121212; color: #e0e0e0; padding: 40px;display: flex;flex-direction: column;align-items: center;}
+            div, form {width: 100%;max-width: 600px;background: #1e1e1e;padding: 20px;margin-bottom: 30px;border-radius: 12px;box-shadow: 0 4px 15px rgba(0,0,0,0.5);}
+            h2 {color: #3498db;border-bottom: 1px solid #333;padding-bottom: 10px;margin-top: 0;}
+            video, iframe {border-radius: 8px;border: 2px solid #333;}
+            fieldset {border: 1px solid #444;border-radius: 8px;}
+            legend {color: #3498db;font-weight: bold;font-size: 1.2rem;}
+            label {display: inline-block;margin-top: 15px;color: #bbb;}
+            input[type="text"], select, textarea {width: 100%;padding: 10px;background: #2c2c2c;border: 1px solid #444;color: white;border-radius: 5px;margin-top: 5px;}
+            button {background-color: #3498db;color: white;border: none;padding: 12px 20px;border-radius: 5px;cursor: pointer;font-weight: bold;margin-top: 20px;width: 100%;transition: 0.3s;}
+            button:hover {background-color: #2980b9;transform: translateY(-2px);}
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2>Local Video Player</h2>
+            <video width="100%" controls poster="https://www.w3schools.com/html/pic_trulli.jpg">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Browser does not support this
+            </video>
+        </div>
+        <div>
+            <h2>Audio Player</h2>
+            <audio controls>
+                Browser does not support this
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <div>
+            <h2>YouTube Integration</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        </div>
+        <h2>The Review Form</h2>
+        <form>
+            <fieldset>
+                <legend>Rate this Media</legend>
+
+                <label for="fullname">User Name</label><br>
+                <input type="text" id="fullname" name="fullname"  required><br>
+
+                <label for="media-type">Select Media to Review</label><br>
+                <select id="media-type" name="media-type">
+                    <option value="video">Local Video</option>
+                    <option value="audio">Audio Clip</option>
+                    <option value="youtube">YouTube Video</option>
+                </select><br>
+
+                <label for="rating">Rating (1 to 10):</label>
+                <input type="range" id="rating" name="rating" min="1" max="10" value="5"><br>
+
+                <label for="comments">Your Comments</label><br>
+                <textarea id="comments" name="comments" rows="4" placeholder="What did you think?"></textarea><br>
+
+                <button type="submit">Submit Review</button>
+            </fieldset>
+        </form>
+    </body>
+</html>
